@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# JobCat - Resume App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br>
 
-## Available Scripts
+A project built from scratch with React, Bootstrap, and CSS - that helps you stay on top of your job search - with a kitty cat!
 
-In the project directory, you can run:
+## Table of contents
+1. [Getting Started](#toc-gettingstarted)
+2. [Summary](#toc-summary)
+3. [App Description](#toc-appdescription)
+4. [Usage](#toc-usage)
+5. [License](#toc-license)
+6. [Collaborators](#toc-collaborators)
+7. [Contribute](#toc-contribute)
+8. [Tests](#toc-tests)
+8. [FAQ](#toc-faq)
+10. [Contact](#toc-contact)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started <a name="toc-gettingstarted"></a>
+This application requires [React](https://www.youtube.com/watch?v=jp1sQZPQ_Rw) use the following commands to get started.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Have a look at this tutorial](https://github.com/gitname/react-gh-pages) that shows you how to get started with React. You will need this command to get started:
 
-### `npm test`
+```javascript
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+And make sure you have React Bootstrap in your package:
 
-### `npm run build`
+```javascript
+npm install react-bootstrap 
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Summary Description <a name="toc-summary"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## User Story
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### As an candidate who is looking for a job in web development:
 
-### `npm run eject`
+# App description <a name="toc-appdescription"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Who is the target audience?
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## What is the problem that it addresses?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## How does the product solve that problem?
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Usage <a name="toc-usage"></a>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![screenshot of the about page](./src/images/aboutme.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## License <a name="toc-license"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is licensed under the MIT license.
 
-### Analyzing the Bundle Size
+## Collaborators <a name="toc-collaborate"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Maciek, Sophie, and Lisa - [Lisa Lorenz](https://github.com/LisaMLorenz). 
 
-### Making a Progressive Web App
+## How to Contribute <a name="toc-contribute"></a>
+If you would like to contribute to this project, please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Submit a pull request.
 
-### Advanced Configuration
+## Tests <a name="toc-tests"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## FAQ <a name="toc-faq"></a>
 
-### Deployment
+## Any more questions? <a name="toc-contact"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
