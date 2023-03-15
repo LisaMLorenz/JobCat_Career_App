@@ -1,0 +1,65 @@
+/* Set the font and font size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+  }
+  
+  /* Set the page margins */
+  @page {
+    margin: 1cm;
+  }
+  
+  /* Set the header and footer */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3cm;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1cm;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1cm;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.5cm;
+  }
+  
+  /* Set the section titles */
+  h1 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 0.5cm;
+  }
+  
+  /* Set the job titles and dates */
+  .job-title {
+    font-size: 12pt;
+    font-weight: bold;
+  }
+  .job-date {
+    font-style: italic;
+    color: #999;
+    margin-bottom: 0.5cm;
+  }
+  
+  /* Set the skills list */
+  .skills-list {
+    margin-bottom: 0.5cm;
+  }
+  .skills-list li {
+    display: inline-block;
+    margin-right: 0.5cm;
+    padding: 0.2cm 0.5cm;
+    border: 1px solid #333;
+    border-radius: 0.3cm;
+  }
+  
