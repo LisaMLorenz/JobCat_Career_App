@@ -6,7 +6,8 @@ function ResumeForm() {
   const [phone, setPhone] = useState('');
   const [location, setLocation] = useState('');
   const [education, setEducation] = useState([{ degree: '', institution: '', date: '' }]);
-  const [experience, setExperience] = useState([{ company: '', position: '', startDate: '', endDate: '' }]);
+  const [experience, setExperience] = useState([{ company: '', position: '', startDate: '', endDate: '' , responsibilities: '' }]);
+  const [skills, setSkills] = useState([""]);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -41,7 +42,17 @@ function ResumeForm() {
   };
 
   const handleAddExperience = () => {
-    setExperience([...experience, { company: '', position: '', startDate: '', endDate: '' }]);
+    setExperience([...experience, { company: '', position: '', startDate: '', endDate: '' , responsibilities: ''  }]);
+  };
+
+  const handleSkillsChange = (e, index) => {
+    const newSkills = [...skills];
+    newSkills[index] = e.target.value;
+    setSkills(newSkills);
+  };
+
+  const handleAddSkill = () => {
+    setSkills([...skills, ""]);
   };
 
   const handleSubmit = (e) => {
@@ -115,7 +126,6 @@ function ResumeForm() {
       <br/>
       <h2>Work Experience</h2>
 
-
       {experience.map((exp, index) => (
         <div key={index}>
           <label>
@@ -154,6 +164,14 @@ function ResumeForm() {
             />
           </label>
           <br/>
+          <label>
+            Responsibilities:
+            <input
+              type="text"
+              value={exp.responsibilities}
+              onChange={(e) => handleExperienceChange(index, 'responsibilities', e.target.value)}
+            />
+          </label>
         </div>
       ))}
       <button type="button" onClick={handleAddExperience}>
@@ -161,7 +179,20 @@ function ResumeForm() {
       </button>
       <br/>
 
-   
+       <div>
+       <h2>Skills</h2>
+      {skills.map((skill, index) => (
+        <div key={index}>
+          <input
+            type="text"
+            value={skill}
+            onChange={(e) => handleSkillsChange(e, index)}
+          />
+        </div>
+      ))}
+      <button onClick={handleAddSkill}>Add Skill</button>
+    </div>
+
       <button type="submit">Create resume</button>
     </form>
   );
