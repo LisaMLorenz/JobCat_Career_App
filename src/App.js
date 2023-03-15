@@ -1,10 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header'
+import Footer from './components/Footer'
+import ResumeForm from './components/ResumeForm'
+import JobSearch from './components/JobSearch';
 
 function App() {
   return (
-    <div className="App">
-  <ResumeForm/>
+    <div>
+   <Header/>
+   <ResumeForm/>
+   <JobSearch/>
+   <Footer/>
     </div>
   );
 }
