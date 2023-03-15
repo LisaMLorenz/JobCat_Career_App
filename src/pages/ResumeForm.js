@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { saveAs } from 'file-saver';
 
 function ResumeForm() {
   const [name, setName] = useState('');
@@ -51,18 +52,25 @@ function ResumeForm() {
     setSkills(newSkills);
   };
 
-  const handleAddSkill = () => {
+  const handleAddSkill = (e) => {
+    e.preventDefault();
     setSkills([...skills, ""]);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Phone:', phone);
-    console.log('Location:', location);
-    console.log('Education:', education);
-    console.log('Experience:', experience);
+    const formData = {
+      name,
+      email,
+      phone,
+      location,
+      education,
+      experience,
+      skills
+    };
+    const json = JSON.stringify(formData);
+    const blob = new Blob([json], { type: "application/json" });
+    saveAs(blob, "resume.json");
   };
 
   return (
