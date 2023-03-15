@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { saveAs } from 'file-saver';
+import Resume from './Resume'
+import ReactDOM from 'react-dom';
 
 function ResumeForm() {
   const [name, setName] = useState('');
@@ -57,6 +58,7 @@ function ResumeForm() {
     setSkills([...skills, ""]);
   };
 
+  //THIS VERSION OF HANDLE SUMBIT DISPLAS THE READY RESUME ON PAGE (IN ROOT, THINKING HOW TO DISPLAY IT ELSEWHERE)
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
@@ -68,10 +70,28 @@ function ResumeForm() {
       experience,
       skills
     };
-    const json = JSON.stringify(formData);
-    const blob = new Blob([json], { type: "application/json" });
-    saveAs(blob, "resume.json");
+    ReactDOM.render(<Resume formData={formData} />, document.getElementById('root'));
   };
+
+
+  // THIS IS AN ALTERNATIVE FORM HANDLING - It creates a JSON file with data and downloads it.
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const formData = {
+  //     name,
+  //     email,
+  //     phone,
+  //     location,
+  //     education,
+  //     experience,
+  //     skills
+  //   };
+  //   const json = JSON.stringify(formData);
+  //   const blob = new Blob([json], { type: "application/json" });
+  //   saveAs(blob, "resume.json");
+  // };
+
+
 
   return (
     <form onSubmit={handleSubmit}>
