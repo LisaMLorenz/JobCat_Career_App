@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Resume from './Resume'
 import ReactDOM from 'react-dom';
+import html2pdf from 'html2pdf.js';
 
 function ResumeForm() {
   const [name, setName] = useState('');
@@ -58,8 +59,19 @@ function ResumeForm() {
     setSkills([...skills, ""]);
   };
 
+  const handleDownload = () => {
+    const element = document.getElementById('newResume');
+    html2pdf().set({ 
+      enableLinks: true,
+      margin: [10, 10],  // This styles the PDF margins
+      filename: 'resume.pdf',
+    }).from(element).save();
+  }
+
+
+
   //THIS VERSION OF HANDLE SUMBIT DISPLAS THE READY RESUME ON PAGE (IN ROOT, THINKING HOW TO DISPLAY IT ELSEWHERE)
-  const handleSubmit = (e) => {
+  const newResume = (e) => {
     e.preventDefault();
     const formData = {
       name,
@@ -70,8 +82,10 @@ function ResumeForm() {
       experience,
       skills
     };
-    ReactDOM.render(<Resume formData={formData} />, document.getElementById('NewResume'));
+    ReactDOM.render(<Resume formData={formData} />, document.getElementById('newResume'));
   };
+
+
 
 
   // THIS IS AN ALTERNATIVE FORM HANDLING - It creates a JSON file with data and downloads it.
@@ -94,8 +108,8 @@ function ResumeForm() {
 
 
   return (
-    <div>
-    <form onSubmit={handleSubmit}>
+    <div id="resumeContainer">
+    <form>
       <h2>Personal information</h2>
       <label>
         Name:
@@ -222,9 +236,15 @@ function ResumeForm() {
       <button onClick={handleAddSkill}>Add Skill</button>
     </div>
 
-      <button type="submit">Create resume</button>
+      <button onClick={newResume}>Generate Resume</button>
+  
     </form>
-    <div id="NewResume"></div>
+<div>
+    <h2>Your Resume</h2>
+    <div id="newResume"></div>
+    <button onClick={handleDownload}>Download PDF</button>
+     </div>
+   
     </div>
   );
 

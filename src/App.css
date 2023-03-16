@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+
+#resumeContainer {
+  display: flex;
+  gap: 20px;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  margin-top: 5vh;
+  justify-content: space-between;
+}
+
+#newResume{
+  justify-content: center;
+  padding: 1vh;
+  width: 80vh;
+  height: fit-content;
+}
+
+
+
+
+form {
+width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+label {
+  display: flex;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
