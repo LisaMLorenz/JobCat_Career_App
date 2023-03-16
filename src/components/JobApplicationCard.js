@@ -2,11 +2,13 @@ import React from 'react';
 import '../components/styles/jobHistoryCard.css';
 
 function JobApplicationCard(props) {
+    const { jobTitle, company, dateApplied, onDelete } = props;
+
   return (
     <div className="jobhistory-card">
-      <h2>{props.jobTitle}</h2>
-      <h3>{props.company}</h3>
-      <p>{props.dateApplied}</p>
+      <h2>{jobTitle}</h2>
+      <h3>{company}</h3>
+      <p>{dateApplied}</p>
       <button onClick={onDelete}>Delete</button>
     </div>
   );
