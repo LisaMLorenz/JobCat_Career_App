@@ -1,7 +1,7 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
-
+import Home from './pages/Home';
 import NavBar from './components/NavBar'
 import ResumeForm from './pages/ResumeForm'
 import JobSearch from './pages/JobSearch';
@@ -10,6 +10,9 @@ import FAQ from './pages/FAQ';
 import Footer from './components/Footer'
 
 function App() {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   return (
     <div>
       <NavBar />
@@ -22,6 +25,8 @@ function App() {
         <Route path="/FAQ" element={<FAQ />} />
 
       </Routes>
+
+      {isHomePage && <main> <Home /> </main>}
 
       <Footer />
     </div>
