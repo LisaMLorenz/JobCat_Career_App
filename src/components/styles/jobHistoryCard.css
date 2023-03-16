@@ -5,9 +5,14 @@
     border-radius: 10px;
 }
 
-.button {
-    background-color: blueviolet;
+#delete-button {
+    background-color: rgb(168, 226, 43);
     border-radius: 10px;
-    
+
+}
+
+#delete-button :hover {
+    background-color: rgb(43, 226, 98);
+    border-radius: 10px;
 
 }

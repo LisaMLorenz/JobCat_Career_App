@@ -9,7 +9,7 @@ function JobApplicationCard(props) {
       <h2>{jobTitle}</h2>
       <h3>{company}</h3>
       <p>{dateApplied}</p>
-      <button onClick={onDelete}>Delete</button>
+      <button id="delete-button" onClick={onDelete}>Delete</button>
     </div>
   );
 }
