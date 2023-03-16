@@ -18,8 +18,8 @@ function JobApplicationHistory() {
     localStorage.setItem('jobApplications', JSON.stringify(applications));
   }, [applications]);
 
-  const addApplication = (jobTitle, company, dateApplied) => {
-    const newApplication = { jobTitle, company, dateApplied };
+  const addApplication = (jobTitle, company, dateApplied, onDelete) => {
+    const newApplication = { jobTitle, company, dateApplied, onDelete };
     const updatedApplications = [...applications, newApplication];
     setApplications(updatedApplications);
   };
