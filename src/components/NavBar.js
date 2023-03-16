@@ -27,7 +27,7 @@ function Navigation() {
         <Nav className="mr-auto">
           <Nav.Link as={Link} to="/ResumeForm">Resume</Nav.Link>
           <Nav.Link as={Link} to="/JobSearch">Job Search</Nav.Link>
-          <Nav.Link as={Link} to="/ApplicationHistory">Application History</Nav.Link>
+          <Nav.Link as={Link} to="/JobApplicationHistory">Application History</Nav.Link>
           {/* <Nav.Link as={Link} to="/">Home</Nav.Link> */}
         </Nav>
       </Navbar.Collapse>
