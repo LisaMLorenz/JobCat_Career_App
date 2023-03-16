@@ -70,7 +70,7 @@ function ResumeForm() {
       experience,
       skills
     };
-    ReactDOM.render(<Resume formData={formData} />, document.getElementById('root'));
+    ReactDOM.render(<Resume formData={formData} />, document.getElementById('NewResume'));
   };
 
 
@@ -94,6 +94,7 @@ function ResumeForm() {
 
 
   return (
+    <div>
     <form onSubmit={handleSubmit}>
       <h2>Personal information</h2>
       <label>
@@ -223,7 +224,13 @@ function ResumeForm() {
 
       <button type="submit">Create resume</button>
     </form>
+    <div id="NewResume"></div>
+    </div>
   );
+
+
+
+
 }
 
 export default ResumeForm;
