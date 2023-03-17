@@ -2,11 +2,10 @@ import React from 'react';
 import confetti from 'canvas-confetti';
 
 
-function generateCatConfetti() {
+function generateConfetti() {
   // Set the options for the confetti
   var count = 200;
   var defaults = {
-    image: '/images/cat-emoji.png', // The image to use for the particles
     origin: { y: 0.7 }
   };
 
@@ -18,24 +17,29 @@ function generateCatConfetti() {
 
   fire(0.25, {
     spread: 26,
+    
     startVelocity: 55,
   });
   fire(0.2, {
     spread: 60,
+    
   });
   fire(0.35, {
+    
     spread: 100,
     decay: 0.91,
     scalar: 0.8
   });
   fire(0.1, {
     spread: 120,
+   
     startVelocity: 25,
     decay: 0.92,
     scalar: 1.2
   });
   fire(0.1, {
     spread: 120,
+    
     startVelocity: 45,
   });
 
@@ -45,10 +49,10 @@ confetti.create(document.getElementById('canvas'), defaults);
 
 };
 
-function CatfettiButton() {
+function ConfettiButton() {
   return (
-    <button onClick={() => generateCatConfetti()}>Click for Catfetti!</button>
+    <button onClick={() => generateConfetti()}>Click for Confetti!</button>
   );
 }
 
-export default CatfettiButton;
+export default ConfettiButton;

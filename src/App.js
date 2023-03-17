@@ -11,7 +11,7 @@ import Footer from './components/Footer'
 
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
-import CatfettiButton from './components/Catfetti';
+
 
 UIkit.use(Icons);
 
@@ -31,7 +31,7 @@ function App() {
         <Route path="/FAQ" element={<FAQ />} />
         
       </Routes>
-      <CatfettiButton />
+      
       {isHomePage && <main> <Home /> </main>}
 
       <Footer />

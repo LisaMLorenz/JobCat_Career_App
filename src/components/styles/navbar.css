@@ -1,0 +1,21 @@
+/* font-family: 'Fraunces', serif;
+font-family: 'Inter Tight', sans-serif;
+font-family: 'Piazzolla', serif;
+font-family: 'Sofia Sans Semi Condensed', sans-serif;
+font-family: 'Tinos', serif; */
+
+#mynavstyle {
+    background-color: var(--primary);
+    padding: 30px;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: x-large;
+    flex: auto;
+}
+
+a.navbar-brand {
+    width: 100px;
+    height: auto;
+    font-size: x-large;
+    font-weight: 900;
+}

@@ -37,7 +37,8 @@ function JobApplicationHistory() {
 
   return (
     <div>
-      <h1>Job Application History</h1>
+      <h1>Job App History</h1>
+      <h3>Save your progress and keep track of your hard work. Writing job apps is a skill that can be honed. You can be proud of yourself - keep up the good work. Miow!</h3>
       <JobApplicationForm addApplication={addApplication} />
       <div>
         {applications.map((application, index) => (

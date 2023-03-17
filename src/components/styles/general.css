@@ -1,0 +1,158 @@
+/* font-family: 'Fraunces', serif;
+font-family: 'Inter Tight', sans-serif;
+font-family: 'Piazzolla', serif;
+font-family: 'Sofia Sans Semi Condensed', sans-serif;
+font-family: 'Tinos', serif; */
+
+:root {
+    --primary: #2ec7a1;
+    --secondary: #8e7656;
+    --tertiary: #c2b9ad;
+    --on-primary: #fafafa;
+    --on-secondary: #000504;
+    --on-tertiary: #f47018;
+}
+
+.welcome-message {
+    margin: 50px;
+
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    height: 250px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 60pt !important;
+    font-weight: 800;
+    color: #000504;
+}
+
+h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 20pt !important;
+
+
+}
+
+#home-button {
+    display: inline-block;
+    font-family: 'Inter Tight', sans-serif;
+    margin: 40px 20px 0px 0px;
+    font-weight: 400;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
+
+
+#home-button:hover,
+#home-button:focus {
+    box-shadow: inset 0 0 0 2em var(--on-tertiary);
+
+}
+
+
+#job-search-button {
+    display: inline-block;
+    margin: 40px 20px 0px 0px;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--on-tertiary);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+#job-search-button::before {
+    content: "You've come so far!";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: var(--tertiary);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+#job-search-button:hover::before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#resume-button {
+    display: inline-block;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+    margin: 40px 20px 0px 0px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--on-tertiary);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+#resume-button::before {
+    content: "You've come so far!";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: var(--tertiary);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+#resume-button:hover::before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-links {
+    font-family: 'Fraunces', serif;
+    background-color: var(--primary);
+    padding: 30px;
+    font-weight: 200;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
