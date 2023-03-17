@@ -1,43 +1,5 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+/* Style of the whole page with the resume form and preview */
 #resumePageContainer {
   display: flex;
   gap: 5vh;
@@ -47,33 +9,63 @@
   justify-content: space-around;
 }
 
+/* Style of the resume form */
 #resumeForm {
+  border: solid 1px rgb(21, 21, 21);
   display: flex;
   flex-direction: column;
   align-items:flex-start;
-  border: solid 2px red;
   padding: 20px;
   background-color: #f2f2f2;
   border-radius: 10px;
-  width: 50%;
+  width: 30%;
   height: auto;
   margin-bottom: 10vh;
 }
 
+/* Styles of the resume preview container */
 #newResumeContainer {
-  border: solid 2px red;
+  border: solid 1px rgb(21, 21, 21);
   border-radius: 10px;
   margin: 0 auto;
   padding: 20px;
   background-color: #f2f2f2;
-  width: 50%;
+  width: 60%;
   height: auto;
   margin-bottom: 10vh;
 }
 
+/* Styles of the resume */
 #newResume {
+  border: solid 1px rgb(21, 21, 21);
+  border-radius: 10px;
   justify-content: center;
-  padding: 1vh;
+  padding: 2vh;
   height: fit-content;
   width: 100%;
+  margin-top: 3vh;
+}
+
+/* Styles of the resume header */
+#resumeHeader {
+  background-color: rgb(165, 219, 222);
+  padding: 2vh;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+#resumeHeader h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800;
+}
+
+#resumeHeader p {
+  margin: 0.5vh;
+}
+
+#newResume h2 {
+  background-color:  rgb(165, 219, 222);
+  padding: 2vh;
+  padding-left: 1vh;
+  border-radius: 10px;
 }

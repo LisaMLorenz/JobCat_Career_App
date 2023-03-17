@@ -96,6 +96,7 @@ function ResumeForm() {
         enableLinks: true,
         margin: [10, 10], // This styles the PDF margins
         filename: "resume.pdf",
+
       })
       .from(element)
       .save();
