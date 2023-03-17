@@ -1,9 +1,12 @@
 import React from 'react';
 
+
+//This is the actual resume rendered on page. Can be used for adding styles. 
+
 function Resume({ formData }) {
     return (
       <div>
-        <h1>{formData.name}</h1>
+        <h2>{formData.name}</h2>
         <p>Email: {formData.email}</p>
         <p>Phone: {formData.phone}</p>
         <p>Location: {formData.location}</p>
@@ -29,7 +32,7 @@ function Resume({ formData }) {
         ))}
   
         <h2>Skills</h2>
-        <ul>
+        <ul className="uk-list uk-list-divider">
           {formData.skills.map((skill, index) => (
             <li key={index}>{skill}</li>
           ))}

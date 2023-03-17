@@ -32,53 +32,48 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-#resumeContainer {
+#resumePageContainer {
   display: flex;
-  gap: 20px;
+  gap: 5vh;
   margin-left: 10vh;
   margin-right: 10vh;
   margin-top: 5vh;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-#newResume{
-  justify-content: center;
-  padding: 1vh;
-  width: 80vh;
-  height: fit-content;
-}
-
-
-
-
-form {
-width: 50%;
-  margin: 0 auto;
+#resumeForm {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  border: solid 2px red;
   padding: 20px;
   background-color: #f2f2f2;
   border-radius: 10px;
+  width: 50%;
+  height: auto;
+  margin-bottom: 10vh;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  display: block;
+#newResumeContainer {
+  border: solid 2px red;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  width: 50%;
+  height: auto;
+  margin-bottom: 10vh;
+}
+
+#newResume {
+  justify-content: center;
+  padding: 1vh;
+  height: fit-content;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-label {
-  display: flex;
-  font-weight: bold;
-  margin-bottom: 10px;
 }

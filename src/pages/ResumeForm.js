@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Resume from "./Resume";
 import ReactDOM from "react-dom";
-import html2pdf from "html2pdf.js";
+import html2pdf from "html2pdf.js"; //To download PDF of resume
 import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
-
 UIkit.use(Icons);
 
+//State for Resume Form.
 function ResumeForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,6 +26,7 @@ function ResumeForm() {
   ]);
   const [skills, setSkills] = useState([""]);
 
+  //Functions for handling changing of form input
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -58,6 +59,7 @@ function ResumeForm() {
     setExperience(newExperience);
   };
 
+  //Function for button to add more experience
   const handleAddExperience = () => {
     setExperience([
       ...experience,
@@ -76,12 +78,17 @@ function ResumeForm() {
     newSkills[index] = e.target.value;
     setSkills(newSkills);
   };
-
+  
+  //Function for button to add more skills
   const handleAddSkill = (e) => {
     e.preventDefault();
     setSkills([...skills, ""]);
   };
 
+  //  state variable for download button so it shows only when Generate Resume clicked
+  const [showDownload, setShowDownload] = useState(false); 
+
+  //Function for PDF download button
   const handleDownload = () => {
     const element = document.getElementById("newResume");
     html2pdf()
@@ -94,7 +101,7 @@ function ResumeForm() {
       .save();
   };
 
-  //THIS VERSION OF HANDLE SUMBIT DISPLAS THE READY RESUME ON PAGE (IN ROOT, THINKING HOW TO DISPLAY IT ELSEWHERE)
+  //Function for Generate Resume Button = renders new resume one page
   const newResume = (e) => {
     e.preventDefault();
     const formData = {
@@ -110,6 +117,7 @@ function ResumeForm() {
       <Resume formData={formData} />,
       document.getElementById("newResume")
     );
+    setShowDownload(true); // show download button when resume is generated
   };
 
   // THIS IS AN ALTERNATIVE FORM HANDLING - It creates a JSON file with data and downloads it.
@@ -130,13 +138,13 @@ function ResumeForm() {
   // };
 
   return (
-    <div id="resumeContainer">
-      <form className="uk-form-horizontal uk-margin-large-bottom">
+    <div className="uk-container-expand" id="resumePageContainer">
+      <form id="resumeForm" className="uk-form-horizontal">
         <h2>Personal information</h2>
         <label>
           Name:
           <input
-            className="uk-input"
+            className="uk-input uk-form-width-large"
             type="text"
             value={name}
             onChange={handleNameChange}
@@ -146,7 +154,7 @@ function ResumeForm() {
         <label>
           Email:
           <input
-            className="uk-input"
+            className="uk-input uk-form-width-large"
             type="email"
             value={email}
             onChange={handleEmailChange}
@@ -156,7 +164,7 @@ function ResumeForm() {
         <label>
           Phone:
           <input
-            className="uk-input"
+            className="uk-input uk-form-width-large"
             type="text"
             value={phone}
             onChange={handlePhoneChange}
@@ -166,7 +174,7 @@ function ResumeForm() {
         <label>
           Location:
           <input
-            className="uk-input"
+            className="uk-input uk-form-width-large"
             type="text"
             value={location}
             onChange={handleLocationChange}
@@ -179,7 +187,7 @@ function ResumeForm() {
             <label>
               Degree:
               <input
-                className="uk-input"
+                className="uk-input uk-form-width-large"
                 type="text"
                 value={edu.degree}
                 onChange={(e) =>
@@ -191,7 +199,7 @@ function ResumeForm() {
             <label>
               Institution:
               <input
-                className="uk-input"
+                className="uk-input uk-form-width-large"
                 type="text"
                 value={edu.institution}
                 onChange={(e) =>
@@ -203,7 +211,7 @@ function ResumeForm() {
             <label>
               Completion date:
               <input
-                className="uk-input"
+                className="uk-input uk-form-width-large"
                 type="date"
                 value={edu.date}
                 onChange={(e) =>
@@ -225,7 +233,7 @@ function ResumeForm() {
             <label>
               Company:
               <input
-                className="uk-input"
+                className="uk-input uk-form-width-large"
                 type="text"
                 value={exp.company}
                 onChange={(e) =>
@@ -237,7 +245,7 @@ function ResumeForm() {
             <label>
               Position:
               <input
-                className="uk-input"
+                className="uk-input uk-form-width-large"
                 type="text"
                 value={exp.position}
                 onChange={(e) =>
@@ -249,7 +257,7 @@ function ResumeForm() {
             <label>
               Start date:
               <input
-                className="uk-input"
+                className="uk-input uk-form-width-large"
                 type="date"
                 value={exp.startDate}
                 onChange={(e) =>
@@ -261,7 +269,7 @@ function ResumeForm() {
             <label>
               End date:
               <input
-                className="uk-input"
+                className="uk-input uk-form-width-large"
                 type="date"
                 value={exp.endDate}
                 onChange={(e) =>
@@ -272,8 +280,8 @@ function ResumeForm() {
             <br />
             <label>
               Responsibilities:
-              <input
-                className="uk-input"
+              <textarea
+                className="uk-textarea"
                 type="text"
                 value={exp.responsibilities}
                 onChange={(e) =>
@@ -297,7 +305,7 @@ function ResumeForm() {
           {skills.map((skill, index) => (
             <div key={index}>
               <input
-                className="uk-input"
+                className="uk-input uk-form-width-large"
                 type="text"
                 value={skill}
                 onChange={(e) => handleSkillsChange(e, index)}
@@ -308,10 +316,24 @@ function ResumeForm() {
         </div>
         <button onClick={newResume}>Generate Resume</button>
       </form>
-      <div className="uk-card uk-card-default uk-card-body">
-        <h2 className="uk-card-title">Your Resume</h2>
-        <div  id="newResume"></div>
-        <button className="uk-button"onClick={handleDownload}>Download PDF</button>
+
+      <div
+        id="newResumeContainer"
+        className="uk-card uk-card-default uk-card-body uk-card-hover"
+      >
+        <h2>Your Resume</h2>
+        <div id="newResume"></div>
+        <div className="uk-margin">
+          {/* Only show download button when Generate Resume clicked */}
+          {showDownload && (
+            <button
+              className="uk-button uk-button-secondary"
+              onClick={handleDownload}
+            >
+              Download PDF
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
