@@ -1,4 +1,5 @@
 import React from "react";
+import '../components/styles/resumestyling.css'
 
 //This is the actual resume rendered on page. Can be used for adding styles.
 

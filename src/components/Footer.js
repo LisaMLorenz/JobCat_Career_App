@@ -4,7 +4,7 @@ import '../components/styles/general.css';
 const Footer = () => {
     return (
         <div className='footer-links'>
-            © Sophie Dodsworth || Maciek Klimowicz || Lisa Lorenz
+            ©  <a id="footer-link" href="https://github.com/sophiedodsworth">  Sophie Dodsworth</a> || <a id="footer-link" href="https://github.com/manonthemon">Maciek Klimowicz</a> || <a id="footer-link" href="https://github.com/LisaMLorenz">Lisa Lorenz</a>
         </div>
     )
 }

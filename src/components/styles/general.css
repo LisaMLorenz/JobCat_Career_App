@@ -1,8 +1,13 @@
- /* font-family: 'Fraunces', serif;
+/* Just a reminder to see what fonts we've used from Google Fonts */
+
+/* font-family: 'Fraunces', serif;
 font-family: 'Inter Tight', sans-serif;
 font-family: 'Piazzolla', serif;
 font-family: 'Sofia Sans Semi Condensed', sans-serif;
 font-family: 'Tinos', serif; */
+
+
+/* Our colour scheme so we can easily adjust to different styles if needed */
 
 :root {
     --primary: #2ec7a1;
@@ -13,9 +18,10 @@ font-family: 'Tinos', serif; */
     --on-tertiary: #f47018;
 }
 
+/* This styling is for the Welcome Page */
+
 .welcome-message {
     margin: 50px;
-
 }
 
 .image-container {
@@ -29,18 +35,7 @@ font-family: 'Tinos', serif; */
     margin-bottom: 20px;
 }
 
-h1 {
-    font-family: 'Fraunces', serif;
-    font-weight: 800 !important;
-    color: #000504;
-}
-
-h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 20pt !important;
-
-
-}
+/* Button styling for Welcome page */
 
 #home-button {
     display: inline-block;
@@ -59,11 +54,25 @@ h3 {
 
 }
 
+/* Hover Effect */
 
 #home-button:hover,
 #home-button:focus {
     box-shadow: inset 0 0 0 2em var(--on-tertiary);
 
+}
+
+/* General styling for all headers & buttons across the app*/
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800 !important;
+    color: #000504;
+}
+
+h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 20pt !important;
 }
 
 button {
@@ -84,7 +93,119 @@ button {
 
 }
 
+h2{
+    font-family: 'Fraunces', serif !important;
+    font-size: medium;
+}
 
+
+
+.uk-input {
+    width: 100%;
+    max-width: 100%;
+}
+
+label {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+}
+
+input {
+    max-width: flex;
+    border-radius: 5px !important;
+}
+
+/* Styles of the resume preview container */
+
+#newResumeContainer {
+    border: solid 1px rgb(21, 21, 21);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    width: 60%;
+    height: auto;
+    margin-bottom: 10vh;
+}
+
+/* Navbar Styling */
+
+#nav-text {
+    text-decoration: none;
+    position: relative;
+
+}
+
+
+#nav-text::before {
+    transition: 500ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    margin: -10px;
+    background-color: var(--on-tertiary);
+}
+
+
+#nav-text::before {
+    width: 90%;
+    bottom: 10px;
+    margin: 0px 5px 0px 0px;
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+}
+
+#nav-text:hover::before {
+    bottom: 10px;
+    opacity: 0.5;
+}
+
+#nav-text:active {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10%,
+    90% {
+        transform: translate(-1px, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate(2px, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate(-4px, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate(4px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* This isn't working 'sad-face'
+
+  #nav-text:hover {
+    opacity: 1;
+    cursor: url('./cat-emoji.png'), auto; 
+  } 
+  
+  */
+
+/* Footer Styling */
 
 .footer-links {
     font-family: 'Fraunces', serif;
@@ -95,109 +216,16 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none !important;
 }
 
-h2{
-    font-family: 'Fraunces', serif !important;
-    font-size: medium;
+#footer-link {
+    text-decoration: none !important;
+    color: black;
+    margin: 10px;
 }
 
-/* Style of the whole page with the resume form and preview */
-#resumePageContainer {
-    display: flex;
-    gap: 5vh;
-    margin-left: 10vh;
-    margin-right: 10vh;
-    margin-top: 5vh;
-    justify-content: space-around;
-  }
-  
-  /* Style of the resume form */
-  #resumeForm {
-    border: none;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    padding: 20px;
-    background-color: var(--tertiary);
-    border-radius: 10px;
- 
-    height: auto;
-    margin-bottom: 10vh;
-  }
-
-  .uk-input {
-    width: 100%;
-    max-width: 100%;
-  }
-
-label {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 500;
-  }
-
-  input {
-    max-width: flex;
-    border-radius: 5px !important;
-  }
-  
-  /* Styles of the resume preview container */
-  #newResumeContainer {
-    border: solid 1px rgb(21, 21, 21);
-    border-radius: 10px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f2f2f2;
-    width: 60%;
-    height: auto;
-    margin-bottom: 10vh;
-  }
-
- #nav-text{
-    text-decoration: none;
- 
-    position: relative;
-   
-  }
-  
-  #nav-text:hover {
-    opacity: 1;
-  }
-  
-  #nav-text::before {
-    transition: 500ms;
-    height: 5px;
-    content: "";
-    position: absolute;
-    margin: -10px;
-    background-color: var(--on-tertiary);
-  }
-
-
-#nav-text::before {
-    width: 90%;
-    bottom: 10px;
-    margin: 0px 5px 0px 0px;
-    opacity: 0;
-    display: inline-block;
-    position: absolute;
-    
-  }
-  
-  #nav-text:hover::before {
-    bottom: 10px;
-    opacity: 0.5;
-  }
-
-  #nav-text:active {
-    animation: shake 0.3s;
-  }
-  
-  @keyframes shake {
-    0% { transform: translate(0, 0); }
-    10%, 90% { transform: translate(-1px, 0); }
-    20%, 80% { transform: translate(2px, 0); }
-    30%, 50%, 70% { transform: translate(-4px, 0); }
-    40%, 60% { transform: translate(4px, 0); }
-    100% { transform: translate(0, 0); }
-  }
+#footer-link:hover {
+    text-decoration: none !important;
+    text-decoration: dotted;
+}

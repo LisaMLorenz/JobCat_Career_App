@@ -3,6 +3,7 @@ import Resume from "./Resume";
 import ReactDOM from "react-dom";
 import html2pdf from "html2pdf.js"; //To download PDF of resume
 import confetti from "canvas-confetti";
+import '../components/styles/resumestyling.css'
 
 //State for Resume Form.
 function ResumeForm() {

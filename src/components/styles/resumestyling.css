@@ -1,0 +1,25 @@
+/* Style of the whole page with the resume form and preview */
+
+#resumePageContainer {
+    display: flex;
+    gap: 5vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-top: 5vh;
+    justify-content: space-around;
+}
+
+/* Style of the resume form */
+
+#resumeForm {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: var(--tertiary);
+    border-radius: 10px;
+
+    height: auto;
+    margin-bottom: 10vh;
+}
