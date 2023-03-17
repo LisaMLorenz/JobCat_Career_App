@@ -1,4 +1,14 @@
 
+:root {
+  --primary: #2ec7a1;
+  --secondary: #8e7656;
+  --tertiary: #c2b9ad;
+  --on-primary: #fafafa;
+  --on-secondary: #000504;
+  --on-tertiary: #f47018;
+}
+
+
 /* Style of the whole page with the resume form and preview */
 #resumePageContainer {
   display: flex;
@@ -16,7 +26,7 @@
   flex-direction: column;
   align-items:flex-start;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: var(--on-primary);
   border-radius: 10px;
   width: 30%;
   height: auto;
@@ -25,11 +35,11 @@
 
 /* Styles of the resume preview container */
 #newResumeContainer {
-  border: solid 1px rgb(21, 21, 21);
+  border: solid 1px var(--on-tertiary);
   border-radius: 10px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: var(--on-primary);
   width: 60%;
   height: auto;
   margin-bottom: 10vh;
@@ -37,7 +47,7 @@
 
 /* Styles of the resume */
 #newResume {
-  border: solid 1px rgb(21, 21, 21);
+  border: solid 1px var(--on-primary);
   border-radius: 10px;
   justify-content: center;
   padding: 2vh;
@@ -48,24 +58,18 @@
 
 /* Styles of the resume header */
 #resumeHeader {
-  background-color: rgb(165, 219, 222);
+  border-color: var(--tertiary);
   padding: 2vh;
-  color: rgb(255, 255, 255);
+  color: var(--primary);
   border-radius: 10px;
 }
 
 #resumeHeader h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Fraunces', serif;
   font-weight: 800;
+  margin: 2vh;
 }
 
 #resumeHeader p {
-  margin: 0.5vh;
-}
-
-#newResume h2 {
-  background-color:  rgb(165, 219, 222);
-  padding: 2vh;
-  padding-left: 1vh;
-  border-radius: 10px;
+  margin: 2vh;
 }
