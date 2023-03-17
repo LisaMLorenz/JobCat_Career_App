@@ -53,10 +53,9 @@ h3 {
     background-color: var(--primary);
     border: none;
     border-radius: 50px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(223, 136, 6, 0.2);
     position: relative;
     overflow: hidden;
-    transition: box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
 }
 
@@ -152,4 +151,53 @@ label {
     width: 60%;
     height: auto;
     margin-bottom: 10vh;
+  }
+
+ #nav-text{
+    text-decoration: none;
+ 
+    position: relative;
+   
+  }
+  
+  #nav-text:hover {
+    opacity: 1;
+  }
+  
+  #nav-text::before {
+    transition: 500ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    margin: -10px;
+    background-color: var(--on-tertiary);
+  }
+
+
+#nav-text::before {
+    width: 90%;
+    bottom: 10px;
+    margin: 0px 5px 0px 0px;
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    
+  }
+  
+  #nav-text:hover::before {
+    bottom: 10px;
+    opacity: 0.5;
+  }
+
+  #nav-text:active {
+    animation: shake 0.3s;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(0, 0); }
+    10%, 90% { transform: translate(-1px, 0); }
+    20%, 80% { transform: translate(2px, 0); }
+    30%, 50%, 70% { transform: translate(-4px, 0); }
+    40%, 60% { transform: translate(4px, 0); }
+    100% { transform: translate(0, 0); }
   }

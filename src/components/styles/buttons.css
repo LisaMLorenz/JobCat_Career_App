@@ -1,17 +1,18 @@
-.button {
+button {
     display: inline-block;
+    font-family: 'Inter Tight', sans-serif !important;
     padding: 10px 20px;
     font-size: 16px;
-    color: #fff;
-    background-color: #333;
+    color: var(--on-secondary);
+    background-color: var(--primary);
     border: none;
-    border-radius: 50px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 50px !important;
+    box-shadow: 0 10px 20px var(--on-tertiary)(0, 0, 0, 0.3)!important;
     position: relative;
     overflow: hidden;
   }
   
-  .button::before {
+  button::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -24,9 +25,9 @@
     opacity: 0;
   }
   
-  .button:hover::before {
+  button:hover::before {
     width: 200%;
     height: 200%;
     opacity: 1;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
