@@ -73,6 +73,7 @@ h1 {
 h3 {
     font-family: 'Fraunces', serif;
     font-size: 20pt !important;
+    margin-bottom: 40px !important;
 }
 
 button {
@@ -93,7 +94,7 @@ button {
 
 }
 
-h2{
+h2 {
     font-family: 'Fraunces', serif !important;
     font-size: medium;
 }
@@ -109,6 +110,7 @@ label {
     font-family: 'Inter Tight', sans-serif;
     font-weight: 500;
 }
+
 
 input {
     max-width: flex;
@@ -133,7 +135,6 @@ input {
 #nav-text {
     text-decoration: none;
     position: relative;
-
 }
 
 
@@ -204,6 +205,37 @@ input {
   } 
   
   */
+
+
+
+/* Job Application History Page Styles */
+
+#job-history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10vh;
+}
+
+#job-history-container.text{
+   color: #f47018;
+}
+
+label{
+    margin: 0px 20px 20px 0px;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: larger;
+}
+
+input{
+    margin-left: 10px !important;
+    font-family: 'Inter Tight', sans-serif;
+
+}
 
 /* Footer Styling */
 

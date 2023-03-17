@@ -15,6 +15,7 @@ font-family: 'Tinos', serif; */
 
 #nav-text {
     color: black;
+    margin-right: 30px;
 }
 
 #nav-text:hover {

@@ -1,6 +1,16 @@
-.jobhistory-card {
-    padding: 30px;
-    background-color: var(--on-secondary);
-    margin: 30px;
+/* Define the grid container */
+.jobhistory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Add some spacing between the cards */
+  }
+  
+  /* Style the card elements */
+  .jobhistory-card {
+    padding: 40px;
+    margin-top: 30px;
+    background-color: var(--primary);
     border-radius: 10px;
-}
+    height: 300px; /* Set a fixed height for all cards */
+    width: 100% /* Subtract the gap width from each column */
+  }

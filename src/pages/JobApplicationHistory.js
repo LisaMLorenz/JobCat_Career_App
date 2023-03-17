@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import JobApplicationForm from '../components/forms/JobApplicationForm';
 import JobApplicationCard from '../components/JobApplicationCard';
 import '../components/styles/jobHistoryCard.css';
+import '../components/styles/general.css'
+
 
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
@@ -36,11 +38,20 @@ function JobApplicationHistory() {
   };
 
   return (
-    <div>
+    <div className="uk-container-expand" id="job-history-container">
       <h1>Job App History</h1>
       <h3>Save your progress and keep track of your hard work. Writing job apps is a skill that can be honed. You can be proud of yourself - keep up the good work. Miow!</h3>
-      <JobApplicationForm addApplication={addApplication} />
-      <div>
+      
+      <JobApplicationForm addApplication={addApplication} 
+        jobTitleLabelClassName="label-style" 
+        jobTitleInputClassName="input-style" 
+        companyLabelClassName="label-style" 
+        companyInputClassName="input-style"
+        dateAppliedLabelClassName="label-style"
+        dateAppliedInputClassName="input-style"
+      />
+      
+      <div className="jobhistory-grid">
         {applications.map((application, index) => (
           <JobApplicationCard
             key={index}
