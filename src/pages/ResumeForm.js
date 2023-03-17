@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import Resume from "./Resume";
 import ReactDOM from "react-dom";
 import html2pdf from "html2pdf.js"; //To download PDF of resume
-import UIkit from "uikit";
-import Icons from "uikit/dist/js/uikit-icons";
 import confetti from "canvas-confetti";
-UIkit.use(Icons);
 
 //State for Resume Form.
 function ResumeForm() {
@@ -103,7 +100,9 @@ function ResumeForm() {
   };
 
   //Function for Generate Resume Button = renders new resume one page
-  const newResume = () => {
+  const newResume = (event) => {
+    event.preventDefault();
+
     const formData = {
       name,
       email,
@@ -129,14 +128,24 @@ function ResumeForm() {
     function randomInRange(min, max) {
       return Math.random() * (max - min) + min;
     }
-    var interval = setInterval(function() {
+    var interval = setInterval(function () {
       var timeLeft = animationEnd - Date.now();
       if (timeLeft <= 0) {
         return clearInterval(interval);
       }
       var particleCount = 50 * (timeLeft / duration);
-      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
-      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+      confetti(
+        Object.assign({}, defaults, {
+          particleCount,
+          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+        })
+      );
+      confetti(
+        Object.assign({}, defaults, {
+          particleCount,
+          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+        })
+      );
     }, 250);
     confetti.create(document.getElementById("canvas"), defaults);
   };
@@ -340,15 +349,14 @@ function ResumeForm() {
         </div>
 
         <button
-          onClick={() => {
-            newResume();
+          onClick={(e) => {
+            newResume(e);
             generateConfetti();
           }}
         >
           Generate Resume
         </button>
       </form>
-
       <div
         id="newResumeContainer"
         className="uk-card uk-card-default uk-card-body uk-card-hover"
