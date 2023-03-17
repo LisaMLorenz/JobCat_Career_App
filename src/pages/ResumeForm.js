@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import Resume from './Resume'
 import ReactDOM from 'react-dom';
 import html2pdf from 'html2pdf.js';
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
+UIkit.use(Icons);
+
+
 
 function ResumeForm() {
   const [name, setName] = useState('');
