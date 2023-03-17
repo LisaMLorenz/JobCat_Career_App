@@ -166,6 +166,7 @@ function ResumeForm() {
           Name:
           <input
             className="uk-input uk-form-width-large"
+            id="forminputfield"
             type="text"
             value={name}
             onChange={handleNameChange}
@@ -177,6 +178,7 @@ function ResumeForm() {
           <input
             className="uk-input uk-form-width-large"
             type="email"
+            id="forminputfield"
             value={email}
             onChange={handleEmailChange}
           />
@@ -186,6 +188,7 @@ function ResumeForm() {
           Phone:
           <input
             className="uk-input uk-form-width-large"
+            id="forminputfield"
             type="text"
             value={phone}
             onChange={handlePhoneChange}
