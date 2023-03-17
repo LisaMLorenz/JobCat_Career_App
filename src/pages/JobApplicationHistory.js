@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import JobApplicationForm from '../components/forms/JobApplicationForm';
 import JobApplicationCard from '../components/JobApplicationCard';
 
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
+UIkit.use(Icons);
+
 function JobApplicationHistory() {
   const [applications, setApplications] = useState([]);
 

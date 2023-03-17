@@ -9,6 +9,11 @@ import JobApplicationHistory from './pages/JobApplicationHistory';
 import FAQ from './pages/FAQ';
 import Footer from './components/Footer'
 
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
+UIkit.use(Icons);
+
 function App() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
@@ -19,7 +24,7 @@ function App() {
 
       <Routes>
 
-        <Route path="/resumeform" element={<ResumeForm />} />
+        <Route path="/resumeForm" element={<ResumeForm />} />
         <Route path="/JobSearch" element={<JobSearch />} />
         <Route path="/JobApplicationHistory" element={<JobApplicationHistory />} />
         <Route path="/FAQ" element={<FAQ />} />
