@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import html2pdf from "html2pdf.js"; //To download PDF of resume
 import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
+import confetti from "canvas-confetti";
 UIkit.use(Icons);
 
 //State for Resume Form.
@@ -78,7 +79,7 @@ function ResumeForm() {
     newSkills[index] = e.target.value;
     setSkills(newSkills);
   };
-  
+
   //Function for button to add more skills
   const handleAddSkill = (e) => {
     e.preventDefault();
@@ -86,7 +87,7 @@ function ResumeForm() {
   };
 
   //  state variable for download button so it shows only when Generate Resume clicked
-  const [showDownload, setShowDownload] = useState(false); 
+  const [showDownload, setShowDownload] = useState(false);
 
   //Function for PDF download button
   const handleDownload = () => {
@@ -96,15 +97,13 @@ function ResumeForm() {
         enableLinks: true,
         margin: [10, 10], // This styles the PDF margins
         filename: "resume.pdf",
-
       })
       .from(element)
       .save();
   };
 
   //Function for Generate Resume Button = renders new resume one page
-  const newResume = (e) => {
-    e.preventDefault();
+  const newResume = () => {
     const formData = {
       name,
       email,
@@ -114,11 +113,32 @@ function ResumeForm() {
       experience,
       skills,
     };
+
     ReactDOM.render(
       <Resume formData={formData} />,
       document.getElementById("newResume")
     );
     setShowDownload(true); // show download button when resume is generated
+  };
+
+  //CONFETTI
+  const generateConfetti = () => {
+    var duration = 2 * 1000;
+    var animationEnd = Date.now() + duration;
+    var defaults = { startVelocity: 30, spread: 360, ticks: 90, zIndex: 0 };
+    function randomInRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+    var interval = setInterval(function() {
+      var timeLeft = animationEnd - Date.now();
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+      var particleCount = 50 * (timeLeft / duration);
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+    }, 250);
+    confetti.create(document.getElementById("canvas"), defaults);
   };
 
   // THIS IS AN ALTERNATIVE FORM HANDLING - It creates a JSON file with data and downloads it.
@@ -315,7 +335,15 @@ function ResumeForm() {
           ))}
           <button onClick={handleAddSkill}>Add Skill</button>
         </div>
-        <button onClick={newResume}>Generate Resume</button>
+
+        <button
+          onClick={() => {
+            newResume();
+            generateConfetti();
+          }}
+        >
+          Generate Resume
+        </button>
       </form>
 
       <div
