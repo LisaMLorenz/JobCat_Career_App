@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav } from "react-bootstrap";
-import './styles/navbar.css';
+import '../components/styles/navbar.css'
 
 function Navigation() {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,18 +16,21 @@ function Navigation() {
   }, []);
 
   return (
-    <Navbar expand="md" id="mynavstyle">
-      <Navbar.Brand as={Link} to="/" src="images/jobcat-logo.png" alt="logo">JobCaT</Navbar.Brand>
+    <Navbar expand="md" className="navbar-expand-sm navbar-light" id="mynavstyle">
+      <Navbar.Brand as={Link} to="/">
+        <img src="images/jobcat-logo-2.png" width="100" height="30" className="d-inline-block align-top" alt="jobcat logo" />
+        
+      </Navbar.Brand>
       {isMobile ? (
         <Navbar.Toggle aria-controls="basic-navbar-nav" id="nav-button" />
       ) : (
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="d-none" />
       )}
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto" id="navbar">
-          <Nav.Link as={Link} to="/ResumeForm">Resume</Nav.Link>
-          <Nav.Link as={Link} to="/JobSearch">Job Search</Nav.Link>
-          <Nav.Link as={Link} to="/JobApplicationHistory">Application History</Nav.Link>
+        <Nav className="ml-auto" id="navbar">
+          <Nav.Link as={Link} to="/ResumeForm" className="text-lg" id="nav-text">My Resume</Nav.Link>
+          <Nav.Link as={Link} to="/JobSearch" className="text-lg" id="nav-text">Job Search</Nav.Link>
+          <Nav.Link as={Link} to="/JobApplicationHistory" className="text-lg" id="nav-text">Apps History</Nav.Link>
           {/* <Nav.Link as={Link} to="/">Home</Nav.Link> */}
         </Nav>
       </Navbar.Collapse>

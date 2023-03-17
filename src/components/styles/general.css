@@ -31,8 +31,7 @@ font-family: 'Tinos', serif; */
 
 h1 {
     font-family: 'Fraunces', serif;
-    font-size: 60pt !important;
-    font-weight: 800;
+    font-weight: 800 !important;
     color: #000504;
 }
 

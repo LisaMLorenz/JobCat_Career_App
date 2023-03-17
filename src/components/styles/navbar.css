@@ -6,11 +6,20 @@ font-family: 'Tinos', serif; */
 
 #mynavstyle {
     background-color: var(--primary);
+    color: whitesmoke !important;
     padding: 30px;
-    font-family: 'Inter Tight', sans-serif;
+    font-family:  'Fraunces', serif;
     font-weight: 500;
     font-size: x-large;
     flex: auto;
+}
+
+#nav-text {
+    color: black;
+}
+
+#nav-text:hover {
+    color: var(--on-secondary);
 }
 
 a.navbar-brand {
