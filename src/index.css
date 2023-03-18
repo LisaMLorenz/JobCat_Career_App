@@ -14,8 +14,6 @@ font-family: 'Tinos', serif; */
 }
 
 
-
-
 body {
   margin: 0;
   font-family: 'Inter Tight', sans-serif;
@@ -28,47 +26,63 @@ code {
     monospace;
 }
 
+#main-container {
 
+  display: flex;
+  flex-direction: column;
+
+}
+
+#headingAndText {
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 20vh;
+  padding-right: 20vh;
+}
+
+#buttons-container {
+
+  display: flex;
+  margin-bottom: 10vh;
+  justify-content: center;
+  margin-top: -100px;
+}
 
 /* Media queries for phone screen */
 @media screen and (max-width: 480px) {
+
   /* Style of the whole page with the resume form and preview */
   #main-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #headingAndText {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    gap: 20px;
+    padding: 0px;
   }
 
-  .welcome-message {
+  #logo {
+    margin: 0px !important;
+  }
+
+  #welcome-text {
+    margin-top: 6vh;
+    margin-bottom: 12vh;
+  }
+
+  #buttons-container {
     display: flex !important;
     flex-direction: column !important;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-.image-container {
-  padding: 0px;
-  margin: 0px;
-  align-items: center;
-  justify-content: center;
-}
-
-#logo {
-  margin: 0px !important;
-}
-
-#welcome-heading {
-align-self: center;
-margin-top: 2vh;
-margin-bottom: 2vh;
-}
-
-
-#welcome-text {
-  align-self: center;
-  margin-top: 1.5vh;
-  margin-bottom: 0vh;
+    margin-bottom: 6vh !important;
   }
 }

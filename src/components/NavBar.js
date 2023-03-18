@@ -28,9 +28,9 @@ function Navigation() {
       )}
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto" id="navbar">
-          <Nav.Link as={Link} to="/ResumeForm" className="text-lg" id="nav-text">My Resume</Nav.Link>
+          <Nav.Link as={Link} to="/ResumeForm" className="text-lg" id="nav-text">Resume</Nav.Link>
           <Nav.Link as={Link} to="/JobSearch" className="text-lg" id="nav-text">Job Search</Nav.Link>
-          <Nav.Link as={Link} to="/JobApplicationHistory" className="text-lg" id="nav-text">Apps History</Nav.Link>
+          <Nav.Link as={Link} to="/JobApplicationHistory" className="text-lg" id="nav-text">Applications</Nav.Link>
           {/* <Nav.Link as={Link} to="/">Home</Nav.Link> */}
         </Nav>
       </Navbar.Collapse>
