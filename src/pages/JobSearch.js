@@ -23,9 +23,9 @@ const JobSearch = () => {
   };
 
   return (
-    <div>
+    <div className='job-search-box'>
       <h1>Job Search</h1>
-      <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+      <input id="search-input-field" type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
       <button onClick={handleSearch}>Search</button>
       {jobs && jobs.length > 0 ? (
         <div>

@@ -40,7 +40,7 @@ font-family: 'Tinos', serif; */
 #home-button {
     display: inline-block;
     font-family: 'Inter Tight', sans-serif;
-    margin: 40px 20px 0px 0px;
+    margin: 60px 20px 0px 0px !important;
     font-weight: 400;
     padding: 10px 20px;
     font-size: 16px;
@@ -100,7 +100,6 @@ h2 {
 }
 
 
-
 .uk-input {
     width: 100%;
     max-width: 100%;
@@ -115,6 +114,16 @@ label {
 input {
     max-width: flex;
     border-radius: 5px !important;
+}
+
+/* Styles of the job search*/
+
+#search-input-field {
+    margin-right: 20px !important;
+}
+
+.job-search-box{
+    padding: 50px;
 }
 
 /* Styles of the resume preview container */
