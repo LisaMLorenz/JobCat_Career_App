@@ -12,7 +12,7 @@ UIkit.use(Icons);
 function Home() {
 
   return (
-    <Container>
+    <Container id="main-container">
 
       <div className='welcome-message'>
         <Row>
@@ -21,12 +21,15 @@ function Home() {
               <Col>
                 <div className='image-container'>
                   <img src='./images/jobcat-logo.png' alt='jobcat logo' id='logo' className="img-fluid" />
-                  <h1 className='display-4'>Welcome to JobCat</h1>
-                </div>
+                  </div>
+                  <div id="welcome-heading">
+                    <h1 className='display-4'>Welcome to JobCat</h1>
+                  </div>
+                
               </Col>
             </Row>
             <Row>
-              <Col>
+              <Col id="welcome-text">
                 <h3>With JobCat you can quickly create a professional resume, apply for your dream job and manage your job applications. Get to work!</h3>
               </Col>
             </Row>
