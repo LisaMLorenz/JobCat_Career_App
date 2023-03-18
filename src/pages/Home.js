@@ -4,7 +4,7 @@ import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
 import "../components/styles/general.css";
 import "../components/styles/buttons.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 UIkit.use(Icons);
 
