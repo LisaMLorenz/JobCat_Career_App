@@ -73,3 +73,33 @@
 #resumeHeader p {
   margin: 2vh;
 }
+
+
+
+/* Media queries for phone screen */
+@media screen and (max-width: 480px) {
+  /* Style of the whole page with the resume form and preview */
+  #resumePageContainer {
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    padding: 0%;
+    margin: 10px;
+    width: 300px;
+  }
+  
+  /* Style of the resume form */
+  #resumeForm {
+width: 350px;
+    margin-bottom: 5px !important;
+    padding: 0px;
+  }
+  
+  /* Styles of the resume preview container */
+  #newResumeContainer {
+    width: 350px !important;
+    margin: 0px !important;
+    margin-bottom: 4vh !important;
+  }
+}

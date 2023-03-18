@@ -169,7 +169,7 @@ function ResumeForm() {
   // };
 
   return (
-    <div className="uk-container-expand" id="resumePageContainer">
+    <div className="container-fluid" id="resumePageContainer">
       <form id="resumeForm" className="uk-form-horizontal">
         <h2>Personal information</h2>
         <label>
