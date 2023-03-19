@@ -9,12 +9,13 @@ A project built from scratch with React, Bootstrap, and CSS - that helps you sta
 2. [Summary](#toc-summary)
 3. [App Description](#toc-appdescription)
 4. [Usage](#toc-usage)
-5. [License](#toc-license)
-6. [Collaborators](#toc-collaborators)
-7. [Contribute](#toc-contribute)
-8. [Tests](#toc-tests)
-8. [FAQ](#toc-faq)
-10. [Contact](#toc-contact)
+5. [Screenshot](#toc-screenshot)
+6. [License](#toc-license)
+7. [Collaborators](#toc-collaborators)
+8. [Contribute](#toc-contribute)
+9. [Tests](#toc-tests)
+10. [FAQ](#toc-faq)
+11. [Contact](#toc-contact)
 
 
 ## Getting Started <a name="toc-gettingstarted"></a>
@@ -34,20 +35,25 @@ npm install react-bootstrap
 
 ## Summary Description <a name="toc-summary"></a>
 
+- Users can search for jobs using an API generated search bar.
+- Presents users with the option to either upload their existing resume or generate one by inputting information and choosing from three ready-made designs. The application then generates the CV/Resume with the information inputted and design chosen. 
+- The user can keep track of job applications by adding them to an editable list
+
+
 ## User Story
 
 ### As an candidate who is looking for a job in web development:
 
-# App description <a name="toc-appdescription"></a>
 
-## Who is the target audience?
+## App description <a name="toc-appdescription"></a>
 
-## What is the problem that it addresses?
+Introducing JobCat - the all-in-one job application platform that helps you create a stunning resume, apply for your dream job with just a few clicks, and keep track of all your job applications in one place. Say goodbye to the hassle of job hunting and hello to a seamless and stress-free job search experience. Whether you're a recent graduate, a seasoned professional, or anyone in between, JobCat has everything you need to land your dream job. 
 
-## How does the product solve that problem?
 
-# Usage <a name="toc-usage"></a>
+## Usage <a name="toc-usage"></a>
 
+
+## Screenshot <a name="toc-screenshot"></a>
 
 ![screenshot of the about page](./src/images/jobcat-screenshot.png)
 
@@ -56,9 +62,11 @@ npm install react-bootstrap
 
 This project is licensed under the MIT license.
 
+
 ## Collaborators <a name="toc-collaborate"></a>
 
 Maciek, Sophie, and Lisa - [Lisa Lorenz](https://github.com/LisaMLorenz). 
+
 
 ## How to Contribute <a name="toc-contribute"></a>
 If you would like to contribute to this project, please follow these steps:
@@ -69,10 +77,11 @@ If you would like to contribute to this project, please follow these steps:
 4. Push your changes to your fork.
 5. Submit a pull request.
 
+
 ## Tests <a name="toc-tests"></a>
+
 
 ## FAQ <a name="toc-faq"></a>
 
+
 ## Any more questions? <a name="toc-contact"></a>
-
-
