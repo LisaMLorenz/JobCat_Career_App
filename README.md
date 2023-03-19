@@ -49,7 +49,7 @@ npm install react-bootstrap
 # Usage <a name="toc-usage"></a>
 
 
-![screenshot of the about page](./src/images/aboutme.png)
+![screenshot of the about page](./src/images/jobcat-screenshot.png)
 
 
 ## License <a name="toc-license"></a>
