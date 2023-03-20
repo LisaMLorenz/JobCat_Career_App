@@ -6,16 +6,14 @@ A project built from scratch with React, Bootstrap, and CSS - that helps you sta
 
 ## Table of contents
 1. [Getting Started](#toc-gettingstarted)
-2. [Summary](#toc-summary)
-3. [App Description](#toc-appdescription)
-4. [Usage](#toc-usage)
-5. [Screenshot](#toc-screenshot)
+2. [Description](#toc-description)
+3. [User Story](#toc-userstory)
+4. [Screenshot](#toc-screenshot)
+5. [Technologies used](#toc-technologies)
 6. [License](#toc-license)
 7. [Collaborators](#toc-collaborators)
 8. [Contribute](#toc-contribute)
-9. [Tests](#toc-tests)
-10. [FAQ](#toc-faq)
-11. [Contact](#toc-contact)
+9. [Link to deployed application](#toc-link)
 
 
 ## Getting Started <a name="toc-gettingstarted"></a>
@@ -32,15 +30,16 @@ And make sure you have React Bootstrap in your package:
 ```javascript
 npm install react-bootstrap 
 ```
+## Description <a name="toc-appdescription"></a>
 
-## Summary Description <a name="toc-summary"></a>
+Introducing JobCat - the all-in-one job application platform that helps you create a stunning resume, apply for your dream job with just a few clicks, and keep track of all your job applications in one place. Say goodbye to the hassle of job hunting and hello to a seamless and stress-free job search experience. Whether you're a recent graduate, a seasoned professional, or anyone in between, JobCat has everything you need to land your dream job. 
 
 - Users can search for jobs using an API generated search bar.
 - Presents users with the option to either upload their existing resume or generate one by inputting information and choosing from three ready-made designs. The application then generates the CV/Resume with the information inputted and design chosen. 
 - The user can keep track of job applications by adding them to an editable list
 
 
-## User Story
+## User Story <a name="toc-userstory"></a>
 
 As a job seeker...
 
@@ -48,17 +47,14 @@ I want to create a resume, apply for jobs and keep track of my job applications,
 
 so that I can be organised and stay on top of my job search.
 
-## App description <a name="toc-appdescription"></a>
-
-Introducing JobCat - the all-in-one job application platform that helps you create a stunning resume, apply for your dream job with just a few clicks, and keep track of all your job applications in one place. Say goodbye to the hassle of job hunting and hello to a seamless and stress-free job search experience. Whether you're a recent graduate, a seasoned professional, or anyone in between, JobCat has everything you need to land your dream job. 
-
-
-## Usage <a name="toc-usage"></a>
-
 
 ## Screenshot <a name="toc-screenshot"></a>
 
 ![screenshot of the about page](./src/images/jobcat-screenshot.png)
+
+## Technologies used <a name="toc-technologies"></a>
+
+React   /   Node.js.   /   GET routes   /   Netlify   /   JSearch API    /   UIKit NPM   /   html2pdf NPM   /   Formik NPM   /   Canvas Confetti NPM   /   file saver NPM  /   uploader NPM   /   MUI Components   /   Moment.js
 
 
 ## License <a name="toc-license"></a>
@@ -68,10 +64,13 @@ This project is licensed under the MIT license.
 
 ## Collaborators <a name="toc-collaborate"></a>
 
-Maciek, Sophie, and Lisa - [Lisa Lorenz](https://github.com/LisaMLorenz). 
+[Maciek](https://github.com/manonthemon),
+[Lisa](https://github.com/LisaMLorenz) &
+[Sophie](https://github.com/sophiedodsworth)
 
 
 ## How to Contribute <a name="toc-contribute"></a>
+
 If you would like to contribute to this project, please follow these steps:
 
 1. Fork the repository.
@@ -80,5 +79,6 @@ If you would like to contribute to this project, please follow these steps:
 4. Push your changes to your fork.
 5. Submit a pull request.
 
+## Link to deployed application <a name="toc-link"></a>
 
-## Any more questions? <a name="toc-contact"></a>
+You can find the application [here.](https://jobcat.netlify.app/)
