@@ -11,9 +11,9 @@ A project built from scratch with React, Bootstrap, and CSS - that helps you sta
 4. [Screenshot](#toc-screenshot)
 5. [Technologies used](#toc-technologies)
 6. [License](#toc-license)
-7. [Collaborators](#toc-collaborators)
+7. [Collaborators](#toc-collaborate)
 8. [Contribute](#toc-contribute)
-9. [Link to deployed application](#toc-link)
+9. [Deployed application](#toc-link)
 
 
 ## Getting Started <a name="toc-gettingstarted"></a>
@@ -30,7 +30,7 @@ And make sure you have React Bootstrap in your package:
 ```javascript
 npm install react-bootstrap 
 ```
-## Description <a name="toc-appdescription"></a>
+## Description <a name="toc-description"></a>
 
 Introducing JobCat - the all-in-one job application platform that helps you create a stunning resume, apply for your dream job with just a few clicks, and keep track of all your job applications in one place. Say goodbye to the hassle of job hunting and hello to a seamless and stress-free job search experience. Whether you're a recent graduate, a seasoned professional, or anyone in between, JobCat has everything you need to land your dream job. 
 
