@@ -42,8 +42,11 @@ npm install react-bootstrap
 
 ## User Story
 
-### As an candidate who is looking for a job in web development:
+As a job seeker...
 
+I want to create a resume, apply for jobs and keep track of my job applications, all in one place...
+
+so that I can be organised and stay on top of my job search.
 
 ## App description <a name="toc-appdescription"></a>
 
@@ -76,12 +79,6 @@ If you would like to contribute to this project, please follow these steps:
 3. Make your changes and commit them.
 4. Push your changes to your fork.
 5. Submit a pull request.
-
-
-## Tests <a name="toc-tests"></a>
-
-
-## FAQ <a name="toc-faq"></a>
 
 
 ## Any more questions? <a name="toc-contact"></a>
