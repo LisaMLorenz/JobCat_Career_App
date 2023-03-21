@@ -112,6 +112,22 @@ h2 {
     max-width: 100%;
 }
 
+.uk-button-group {
+    box-sizing: border-box;
+    display: block;
+    margin: 0px !important;
+    padding: 0px !important;
+    border-radius: 10px !important;
+    
+}
+
+.jobhistory-card p {
+    margin-bottom: 5px !important;
+}
+
+.jobhistory-card h3 {
+    margin-bottom: 5px !important;
+}
 
 label {
     font-family: 'Inter Tight', sans-serif;
@@ -130,7 +146,7 @@ input {
     margin-right: 20px !important;
 }
 
-.job-search-box{
+.job-search-box {
     padding: 50px;
 }
 
@@ -220,8 +236,8 @@ input {
     min-height: 600px;
 }
 
-.job-cards-container{
-    padding:30px !important;
+.job-cards-container {
+    padding: 30px !important;
     margin: 20px !important;
     display: block;
 }
@@ -247,14 +263,14 @@ input {
 .job-card a:hover {
     color: var(--primary) !important;
     transition: 00.5s;
-    
+
 }
 
 #search-input-field {
-    padding:10px;
+    padding: 10px;
     border-radius: 10px !important;
     margin: 20px 20px 20px 0px !important;
-    
+
 }
 
 
@@ -269,19 +285,19 @@ input {
     width: 100%;
     height: auto;
     margin-bottom: 10vh;
+    box-sizing: border-box !important;
+    display: inline-block;
 }
 
-#job-history-container.text{
-   color: #f47018;
-}
 
-label{
+
+label {
     margin: 0px 20px 20px 0px;
     font-family: 'Inter Tight', sans-serif;
     font-size: larger;
 }
 
-input{
+input {
     margin-left: 10px !important;
     font-family: 'Inter Tight', sans-serif;
 
