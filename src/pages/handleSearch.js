@@ -9,7 +9,7 @@ const handleSearch = (searchTerm, setJobs) => {
       })
         .then(response => response.json())
         .then(data => {
-        setJobs(data.results);
+          setJobs(data.data);
           
           console.log(data); // shows retrieved data in console just need to parse it out now!
           

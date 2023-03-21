@@ -11,6 +11,8 @@ const JobSearch = () => {
     handleSearch(searchTerm, setJobs);
   };
 
+  // console.log('this', jobs);
+
   return (
     <div className='job-search-box'>
       <h1>Job Search</h1>
@@ -23,8 +25,8 @@ const JobSearch = () => {
       ) : (
         <p> </p>
       )}
-    </div>
-  );
+    </div> 
+   );
 };
 
 export default JobSearch;

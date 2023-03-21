@@ -1,4 +1,7 @@
+import './handleSearch';
+
 const renderJobCards = (data) => {
+
     const jobCards = [];
     for (let i = 0; i < 10 && i < data.length; i++) {
       const job = data[i];
@@ -13,7 +16,9 @@ const renderJobCards = (data) => {
         </div>
       );
     }
-    console.log("Card created");
+    
+    // console.log("Card created");
+
     return jobCards;
   };
   
