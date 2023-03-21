@@ -15,7 +15,7 @@ function JobApplicationCard(props) {
 
   const handleGotItClick = () => {
     handleCatGif(); // show modal with cat gif
-  
+
   }
 
   const handleCatGif = () => {
@@ -46,10 +46,12 @@ function JobApplicationCard(props) {
         </button>
       </div>
       {showModal && (
-        <div className="modal-content">
-          <span className="close" onClick={handleCloseModal}>&times;</span>
-          <p>Well done! Here's an amazing cat GIF for you:</p>
-          <img src={catGifUrl} alt="cat GIF" />
+        <div className='modal-container'>
+          <div className="modal-content">
+            <span className="close" onClick={handleCloseModal}>&times;</span>
+            <p>Well done! Here's an amazing cat GIF for you:</p>
+            <img src={catGifUrl} alt="cat GIF" />
+          </div>
         </div>
       )}
     </div >
