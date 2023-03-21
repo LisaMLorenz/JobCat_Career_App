@@ -24,7 +24,7 @@ const JobSearch = () => {
           {renderJobCards(jobs)}
         </div>
       ) : (
-        <p> </p>
+        <p> Sorry, we didn't find any jobs. Maybe try a different location?</p>
       )}
     </div> 
    );
