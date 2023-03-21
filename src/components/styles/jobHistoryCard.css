@@ -14,3 +14,12 @@
     height: 300px; /* Set a fixed height for all cards */
     width: 100% /* Subtract the gap width from each column */
   }
+
+  .modal-content {
+    padding: 30px !important;
+    margin: 50px !important;
+    position: absolute !important;
+    background-color: orange !important;
+    border-radius: 30px !important;
+    width: 50% !important;
+  }
