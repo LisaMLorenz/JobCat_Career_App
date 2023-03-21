@@ -70,6 +70,11 @@ h1 {
     color: #000504;
 }
 
+h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
 h3 {
     font-family: 'Fraunces', serif;
     font-size: 20pt !important;
@@ -97,6 +102,8 @@ button {
 h2 {
     font-family: 'Fraunces', serif !important;
     font-size: medium;
+    font-size: calc(1vw + 1rem);
+
 }
 
 
@@ -104,6 +111,7 @@ h2 {
     width: 100%;
     max-width: 100%;
 }
+
 
 label {
     font-family: 'Inter Tight', sans-serif;
@@ -206,15 +214,16 @@ input {
     }
 }
 
-/* This isn't working 'sad-face'
+/* Job Search Results */
 
-  #nav-text:hover {
-    opacity: 1;
-    cursor: url('./cat-emoji.png'), auto; 
-  } 
-  
-  */
+.job-cards-container{
+    background-color: #2ec7a1;
+    display: block;
+}
 
+.job-card {
+    background-color: #f47018;
+}
 
 
 /* Job Application History Page Styles */
