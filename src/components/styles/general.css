@@ -216,6 +216,10 @@ input {
 
 /* Job Search Results */
 
+.job-search-box {
+    min-height: 600px;
+}
+
 .job-cards-container{
     padding:30px !important;
     margin: 20px !important;
@@ -235,10 +239,23 @@ input {
     color: var(--on-tertiary) !important;
     text-decoration: none;
     font-weight: 300 !important;
+    font-size: x-large;
+    font-weight: 500 !important;
     font-family: 'Inter Tight', sans-serif;
 }
 
+.job-card a:hover {
+    color: var(--primary) !important;
+    transition: 00.5s;
+    
+}
 
+#search-input-field {
+    padding:10px;
+    border-radius: 10px !important;
+    margin: 20px 20px 20px 0px !important;
+    
+}
 
 
 /* Job Application History Page Styles */

@@ -16,7 +16,8 @@ const JobSearch = () => {
   return (
     <div className='job-search-box'>
       <h1>Job Search</h1>
-      <input id="search-input-field" type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+      <h4>Just use the search field below and retrieve the top 10 job ads round town. Keep up the good work!</h4>
+      <input id="search-input-field" type="text" placeholder='Enter Job Title & Place' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
       <button onClick={handleSearchClick}>Search</button>
       {jobs && jobs.length > 0 ? (
         <div className='jobs-cards-container'>
