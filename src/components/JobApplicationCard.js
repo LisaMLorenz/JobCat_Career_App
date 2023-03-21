@@ -22,7 +22,7 @@ function JobApplicationCard(props) {
 
     let giphyKey = "kOCxdNJFr0qRXkuqLrE3gNuSAIsYsHLW&q=";
 
-    var catQueryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + giphyKey + "funny+cat&limit=1&offset=0&rating=r&lang=en"
+    var catQueryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + giphyKey + "funny+cat&limit=100&offset=0&rating=r&lang=en"
     $.ajax({
       "url": catQueryURL,
       "method": "GET"
