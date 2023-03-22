@@ -78,7 +78,9 @@ function JobApplicationCard(props) {
         <div className='modal-container'>
           <div className="modal-content">
             <span className="close" onClick={handleCloseModal}>&times;</span>
-            <h1>Don't be sad!</h1> <p>Here's a funny cat for you. You rock!</p>
+            <h1>Don't be sad!</h1>
+            <p>Here's a funny cat for you.</p>
+            <p>You rock!</p>
             <img src={catGifUrl} alt="cat GIF" />
           </div>
         </div>
