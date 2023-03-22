@@ -17,7 +17,7 @@ function Home() {
           src="./images/jobcat-logo.png"
           alt="jobcat logo"
           id="logo"
-          className="img-fluid"
+          className="img-fluid. max-width: 100%"
         />
         <div id="welcome-heading">
           <h1 className="display-4">Welcome to JobCat</h1>

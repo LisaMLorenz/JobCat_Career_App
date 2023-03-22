@@ -14,6 +14,7 @@
   width: auto;
   margin-top: 5vh;
   justify-content: space-around;
+  display: -webkit-flex;
 }
 
 /* Style of the resume form */
@@ -28,6 +29,7 @@
   width: 30%;
   height: auto;
   margin-bottom: 10vh;
+  display: block;
 }
 
 /* Styles of the resume preview container */
@@ -71,10 +73,8 @@
   margin: 2vh;
 }
 
-
-
-/* Media queries for phone screen */
-@media screen and (max-width: 480px) {
+/* Media queries for phone and medium sized screen */
+@media screen and (max-width: 1000px) {
 
   /* Style of the whole page with the resume form and preview */
   #resumePageContainer {
@@ -82,22 +82,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0%;
-    margin: 10px;
-    width: 220px;
+    /* padding: 20%;
+    margin: 30px; */
+    width: 400px;
+    /* display: block; */
   }
 
   /* Style of the resume form */
   #resumeForm {
-    width: 350px;
+    width: 100%;
     margin-bottom: 5px !important;
     padding: 0px;
+    /* display: block;
+    min-width: 400px; */
+  
   }
 
+  /* .uk-form-horitontal {
+    min-width: 500px;
+  } */
 
   /* Styles of the resume preview container */
   #newResumeContainer {
-    width: 350px !important;
+    width: 100% !important;
     margin: 0px !important;
     margin-bottom: 2vh !important;
   }

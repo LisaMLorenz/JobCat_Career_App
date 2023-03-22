@@ -1,5 +1,5 @@
 .button {
-    display: inline-block;
+    display: block;
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
@@ -12,6 +12,7 @@
   }
   
   .button::before {
+    display: block;
     content: "";
     position: absolute;
     top: 50%;
@@ -25,6 +26,7 @@
   }
   
   .button:hover::before {
+    display: block;
     width: 200%;
     height: 200%;
     opacity: 1;
