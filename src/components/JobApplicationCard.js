@@ -27,7 +27,7 @@ function JobApplicationCard(props) {
       timer = setTimeout(() => {
         setShowConfetti(false);
         onDelete(); // delete card
-      }, 5000);// stop confetti after 5 seconds
+      }, 15000);// stop confetti after 5 seconds
     }
     return () => {
       clearTimeout(timer);
@@ -59,7 +59,7 @@ function JobApplicationCard(props) {
   return (
     
     <div className="jobhistory-card">
-            {showConfetti && <Confetti width={window.innerWidth}/>}
+            {showConfetti && <Confetti width={window.innerWidth} height={1400} />}
 
       <h2>{jobTitle}</h2>
       <h3>{company}</h3>
