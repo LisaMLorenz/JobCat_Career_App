@@ -50,6 +50,42 @@ code {
   margin-top: -100px;
 }
 
+/* Media queries for medium screen size */
+@media screen and (max-width: 800px) {
+
+  #main-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #headingAndText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    gap: 20px;
+    padding: 0px;
+  }
+
+  #logo {
+    margin: 0px !important;
+  }
+
+  #welcome-text {
+    margin-top: 6vh;
+    margin-bottom: 12vh;
+  }
+
+  #buttons-container {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-bottom: 6vh !important;
+  }
+}
+
 /* Media queries for phone screen */
 @media screen and (max-width: 480px) {
 
