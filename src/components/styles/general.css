@@ -233,7 +233,16 @@ input {
 /* Job Search Results */
 
 .job-search-box {
-    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10vh;
+    box-sizing: border-box !important;
+    display: inline-block;
 }
 
 .job-cards-container {
@@ -304,6 +313,11 @@ input {
 }
 
 /* Footer Styling */
+
+footer {
+    position: absolute;
+			bottom: 0;
+}
 
 .footer-links {
     font-family: 'Fraunces', serif;
