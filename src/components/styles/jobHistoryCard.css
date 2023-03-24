@@ -7,6 +7,26 @@
   /* Add some spacing between the cards */
 }
 
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .jobhistory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    gap: 10px;
+    /* Reduce spacing between the cards */
+  }
+}
+
+/* Media query for screens smaller than 480px */
+@media (max-width: 480px) {
+  .jobhistory-grid {
+    grid-template-columns: 1fr;
+    /* 1 column */
+    gap: 10px;
+    /* Reduce spacing between the cards */
+  }
+}
+
 /* Style the card elements */
 .jobhistory-card {
   padding: 40px;
